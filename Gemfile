@@ -13,7 +13,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
+gem 'mini_racer'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -25,6 +25,12 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+group :development, :test do
+  gem 'capybara', '>=2.15'
+  gem 'simplecov', require: false
+  gem 'rspec-rails', '~> 3.7'
+end
 
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment
